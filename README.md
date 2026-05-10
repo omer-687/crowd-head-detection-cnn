@@ -25,35 +25,37 @@ Performance is analysed across three density bins:
 
 ## Visualisations
 
-**Sample Prediction on Real Crowd Image**
-`epoch_017.png`
+Sample prediction on a real crowd image — predicted count vs ground truth displayed on the image itself.
 
-**Predictions vs True Values (Full Range)**
-`predictions.png`
+![Sample Prediction](epoch_017.png)
 
-**Prediction Distribution by Bin**
-`bin_histogram.png`
+Predictions vs true values across the full density range. Points close to the diagonal indicate accurate predictions.
 
-**Confusion Matrix — Full Range**
-`confusion_matrix_full.png`
+![Predictions vs True Values](predictions.png)
 
-**Confusion Matrix — Higher Density Range**
-`confusion_matrix_higher.png`
+Distribution of predictions across count bins.
 
-**Confusion Matrix — Lower Density Range**
-`confusion_matrix_lower.png`
+![Bin Histogram](bin_histogram.png)
 
-**Higher Range Predictions**
-`higher_range_predictions.png`
+Confusion matrix across all density ranges.
 
-**Higher Range Bin Histogram**
-`higher_range_bin_histogram.png`
+![Confusion Matrix Full](confusion_matrix_full.png)
 
-**Lower Range Predictions**
-`lower_range_predictions.png`
+Performance breakdown on lower density crowds.
 
-**Lower Range Bin Histogram**
-`lower_range_bin_histogram.png`
+![Confusion Matrix Lower](confusion_matrix_lower.png)
+
+![Lower Range Predictions](lower_range_predictions.png)
+
+![Lower Range Bin Histogram](lower_range_bin_histogram.png)
+
+Performance breakdown on higher density crowds.
+
+![Confusion Matrix Higher](confusion_matrix_higher.png)
+
+![Higher Range Predictions](higher_range_predictions.png)
+
+![Higher Range Bin Histogram](higher_range_bin_histogram.png)
 
 ---
 
@@ -84,6 +86,7 @@ crowd-head-detection-cnn/
 ├── train.py       # Training loop and configuration
 ├── evaluate.py    # Evaluation, binned analysis, and visualisation
 ├── utils.py       # Helper functions
+├── requirements.txt
 ```
 
 ---
@@ -93,7 +96,7 @@ crowd-head-detection-cnn/
 ### 1. Install Dependencies
 
 ```bash
-pip install torch torchvision opencv-python numpy matplotlib scikit-learn pandas
+pip install -r requirements.txt
 ```
 
 ### 2. Download Dataset
